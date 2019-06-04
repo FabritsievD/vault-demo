@@ -28,7 +28,7 @@ public class VaultIntegrationTest {
     private CredentialsService credentialsService;
 
     @Test
-    public void givenCredentials_whenSecureCredentials_thenCredentialsSecured() throws URISyntaxException {
+    public void storeCredentials() throws URISyntaxException {
         try {
             Credentials credentials = new Credentials("username", "password");
 
@@ -41,7 +41,7 @@ public class VaultIntegrationTest {
     }
 
     @Test
-    public void whenAccessCredentials_thenCredentialsRetrieved() throws URISyntaxException {
+    public void getCredentials() throws URISyntaxException {
 
         Credentials credentials = credentialsService.accessCredentials();
 
